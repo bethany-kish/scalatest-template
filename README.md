@@ -13,13 +13,13 @@ browser = chrome / headless / firefox
 Note that chrome is the default and will be used should no alternative be provided.
 
 
-As an example, to run tests locally using chrome, the following can be run from a shell script
+As an example, to run those tests tagged as `SmokeTest` locally using chrome, the following can be run from a shell script
 ```
 driver_path=/usr/local/bin/chromedriver
-sbt -Dbrowser=chrome -Dwebdriver.chrome.driver=${driver_path} test
+sbt -Dbrowser=chrome -Dwebdriver.chrome.driver=$driver_path clean 'test-only -- -n "uk.co.testcraft.tags.SmokeTest"'
 ```
     
-Similarly, to run tests using firefox, use:
+Similarly, to run all tests using firefox, use:
     
 ```
 driver_path=/usr/local/bin/geckodriver
