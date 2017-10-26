@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver
 import org.scalatest._
 import uk.co.testcraft.utils.Driver
 
-trait BaseFeatureSpec extends FeatureSpec with BeforeAndAfterAll with GivenWhenThen with Matchers with BeforeAndAfter {
+trait BaseFeatureSpec extends FeatureSpec with GivenWhenThen with Matchers with BeforeAndAfter {
 
   import BaseFeatureSpec._
 
